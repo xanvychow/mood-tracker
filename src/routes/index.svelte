@@ -4,6 +4,7 @@
     import EntryModal from '$lib/EntryModal.svelte';
 </script>
 <!-- Entries -->
+<Greeting />
 <section class="container px-4 py-3">
     <div class="d-flex justify-content-between">
    	 <div class="p-2">Mood Log</div>
@@ -13,7 +14,7 @@
     <div class="list-group mb-3">
    	 <!-- Individual Entries -->
     	<Entry />
-        <EntryModal />
    	 
     </div>
 </section>
+<EntryModal />
