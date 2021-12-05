@@ -1,13 +1,14 @@
 <script>
-    import supabase from '$lib/db';
-    let email;
-    async function loginUser() {
-   	    const { error } = await supabase.auth.signIn({
-   		    email
-   	    });
-   	 if (error) alert(error.message);
-    };
+	import supabase from '$lib/db';
+	let email;
+	async function loginUser() {
+		const { error } = await supabase.auth.signIn({
+			email
+		});
+		if (error) alert(error.message);
+	}
 </script>
+
 <div class="card mt-5 m-auto text-center" style="width: 24em;">
 	<div class="card-body">
 		<h5 class="card-title">Welcome</h5>
