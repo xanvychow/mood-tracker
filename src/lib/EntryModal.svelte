@@ -46,19 +46,19 @@
                 <div class="row">
                     <div class="col">
    	                    <form class="form-floating">
-   		                    <input type="number" class="form-control" id="dayInput" value="1" min="1" max="31" />
+   		                    <input type="number" class="form-control" id="dayInput" bind-value={day} min="1" max="31" />
    		                    <label for="dayInput">Day</label>
    	                    </form>
                     </div>
                     <div class="col">
    	                    <form class="form-floating">
-   		                    <input type="number" class="form-control" id="monthInput" value="1" min="1" max="12" />
+   		                    <input type="number" class="form-control" id="monthInput" bind-value={month} min="1" max="12" />
    		                    <label for="monthInput">Month</label>
    	                    </form>
                     </div>
                     <div class="col">
    	                    <form class="form-floating">
-   		                    <input type="number" class="form-control" id="yearInput" value="2021" min="2021" />
+   		                    <input type="number" class="form-control" id="yearInput" bind-value={year} min="2021" />
    		                    <label for="yearInput">Year</label>
    	                    </form>
                     </div>
