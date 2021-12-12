@@ -25,7 +25,6 @@
 		<input
 			class="btn btn-light mb-2"
 			type="button"
-			onclick="myNewEntry"
 			value="+ New Entry"
 			data-bs-toggle="modal"
 			data-bs-target="#newEntry"
