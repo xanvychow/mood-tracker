@@ -1,6 +1,6 @@
 <nav class="navbar navbar-expand-xl navbar-light bg-light">
   <div class="container-fluid">
-    <a class="navbar-brand" href="#">Navbar</a>
+    <a class="navbar-brand" href="#">Mood Tracker</a>
     <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarBasic" aria-controls="navbarBasic" aria-expanded="false" aria-label="Toggle navigation">
       <span class="navbar-toggler-icon"></span>
     </button>
@@ -13,9 +13,6 @@
           <a class="nav-link" href="#">Link</a>
         </li>
       </ul>
-      <form class="d-flex">
-        <input class="form-control me-2" onkeyup="myFucntion()" type="text" id="myInput" placeholder="Search for smth..." aria-label="Search">
-      </form>
     </div>
   </div>
 </nav>

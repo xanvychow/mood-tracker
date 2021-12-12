@@ -25,7 +25,7 @@
    		    mood: mood,
    		    comment: comment
    	    }
-    );
+    )
     if (error) alert(error.message);
 
     location.reload(); // Refresh the page.
@@ -46,19 +46,19 @@
                 <div class="row">
                     <div class="col">
    	                    <form class="form-floating">
-   		                    <input type="number" class="form-control" bind:value={day} id="dayInput" value="1" min="1" max="31" />
+   		                    <input type="number" class="form-control" id="dayInput" value="1" min="1" max="31" />
    		                    <label for="dayInput">Day</label>
    	                    </form>
                     </div>
                     <div class="col">
    	                    <form class="form-floating">
-   		                    <input type="number" class="form-control" bind:value={month} id="monthInput" value="1" min="1" max="12" />
+   		                    <input type="number" class="form-control" id="monthInput" value="1" min="1" max="12" />
    		                    <label for="monthInput">Month</label>
    	                    </form>
                     </div>
                     <div class="col">
    	                    <form class="form-floating">
-   		                    <input type="number" class="form-control" bind:value={year} id="yearInput" value="2021" min="2021" />
+   		                    <input type="number" class="form-control" id="yearInput" value="2021" min="2021" />
    		                    <label for="yearInput">Year</label>
    	                    </form>
                     </div>
@@ -79,7 +79,7 @@
                             autocomplete="off"
                             on:click={() => {
                             emoji = emojiList.worst;
-                            mood = 'Worst';
+                            mood = 'Worst'
                             }}
                         />
                         <label class="btn btn-outline-danger" for="worst">Worst</label>
@@ -118,7 +118,7 @@
                             autocomplete="off"
                             on:click={() => {
                             emoji = emojiList.good;
-                            mood = 'Good';
+                            mood = 'Good'
                             }}
                         />
                         <label class="btn btn-outline-info" for="good">Good</label>
@@ -131,7 +131,7 @@
                             autocomplete="off"
                             on:click={() => {
                             emoji = emojiList.best;
-                            mood = 'Best';
+                            mood = 'Best'
                             }}
                         />
                         <label class="btn btn-outline-success" for="best">Best</label>

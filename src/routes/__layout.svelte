@@ -1,5 +1,26 @@
 <script>
 	import Navbar from '$lib/Navbar.svelte';
+	import supabase from '$lib/db';
+	import { page, session } from '$app/stores';
+	import { browser } from '$app/env';
+	import { goto } from '$app/navigation';
+	if (browser) {
+		$session = supabase.auth.session();
+		redirect();
+		supabase.auth.onAuthStateChange((userSession) => {
+			$session = userSession;
+			redirect();
+		});
+	}
+
+	function redirect() {
+		if ($session && $page.path === '/login') {
+			goto('/');
+		}
+		if (!$session && $page.path === '/') {
+			goto('/login');
+		}
+	}
 	function myFunction() {
 		var input, filter, ul, li, a, i, txtValue;
 		input = document.getElementById('myInput');
@@ -16,28 +37,7 @@
 			}
 		}
 	}
-	import supabase from '$lib/db';
-	import { page, session } from '$app/stores';
-	import { browser } from '$app/env';
-	import { goto } from '$app/navigation';
 
-	if (browser) {
-		$session = supabase.auth.session();
-		redirect();
-		supabase.auth.onAuthStateChange((userSession) => {
-			$session = userSession;
-			redirect();
-		});
-	}
-
-	function redirect() {
-		if ($session && $page.path === '/') {
-			goto('/login');
-		}
-		if (!$session && $page.path === '/login') {
-			goto('/');
-		}
-	}
 </script>
 
 <Navbar />
