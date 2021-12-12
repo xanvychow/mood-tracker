@@ -26,7 +26,7 @@
    		    comment: comment
    	    }
     )
-    if (error) alert(error.message);
+    if (error) alert(error.message)
 
     location.reload(); // Refresh the page.
 }
